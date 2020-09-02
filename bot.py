@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# jolting file in heroku
+
 import telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
 from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)
@@ -11,8 +13,6 @@ import os
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-# Send message in reply to /start
 
 CONT, SPLIT, TODAY, DATE, RESP, LOOP = range(6)
 
