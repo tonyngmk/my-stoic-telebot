@@ -123,11 +123,11 @@ def main():
     updater.start_polling() # Start locally hosting Bot
     updater.idle()  # Run the bot until you press Ctrl-C or the process receives SIGINT,
 
-    PORT = int(os.environ.get('PORT', 5000))
-    updater.start_webhook(listen="0.0.0.0",
-                          port=int(PORT),
-                          url_path=TOKEN)
-    updater.bot.setWebhook('https://my-stoic-telebot.herokuapp.com/' + TOKEN)
+    # PORT = int(os.environ.get('PORT', 5000))
+    # updater.start_webhook(listen="0.0.0.0",
+                          # port=int(PORT),
+                          # url_path=TOKEN)
+    # updater.bot.setWebhook('https://my-stoic-telebot.herokuapp.com/' + TOKEN)
     
 
 if __name__ == '__main__':
