@@ -1,41 +1,62 @@
 # my-stoic-telebot
 
-Search in dailystoic_bot in telegram
+Search @dailystoic_bot in Telegram
 
-### 1. Queries from a json:server via `GET` hosted in Heroku.
+## Diagram
 
-https://my-stoic-bot.herokuapp.com/
+*insert diagram here*
 
-Query string example:
+### 1. JSON:Server 
 
+Hosted on Heroku. Send `GET` requests to retrieve passages via hosted Web App.
+
+- Heroku App: https://my-stoic-bot.herokuapp.com/
+- Hosting files + More elaboration: https://github.com/tonyngmk/stoicserver
+
+##### Query string example:
 https://my-stoic-bot.herokuapp.com/passages?date=Jan01
 
-### 2. Hosted on AWS EC2 Linux2 AMI
+More elaboration: https://en.wikipedia.org/wiki/Query_string
 
-###### Dump of codes to get it up:
 
-sudo yum update -y 
+### 2. BotFather
 
-sudo yum install git -y
+1. Search @BotFather in Telegram
+2. Create bot and grab API key
+3. Pass token to python script
 
-sudo amazon-linux-extras install python3.8 -y
+### 3. Python Telegram Bot
 
-alias python3='/usr/bin/python3.8'
+There are multiple libraries in python to help you create a telegram bot. The more popular one is `python-telegram-bot`.
 
-python3 --version
+	pip install python-telegram-bot
+	
+Thereafter, the python script must continually run for the bot to work. To do so, one can run it on a cloud virtual machine, e.g. AWS EC2, Google Compute Engine, etc.
 
-sudo yum -y install python3-pip
+##### Dump of codes to get it hosted on AWS EC2 Linux2 AMI:
 
-git clone https://github.com/tonyngmk/my-stoic-telebot.git
+	sudo yum update -y 
 
-cd my-stoic-telebot
+	sudo yum install git -y
 
-python3 -m pip install --user -r  requirements.txt
+	sudo amazon-linux-extras install python3.8 -y
 
-screen
+	alias python3='/usr/bin/python3.8'
 
-ctrl + a + c (create new screen)
+	python3 --version
 
-ctrl + a + n (switch screens)
+	sudo yum -y install python3-pip
 
-python3 bot.py
+	git clone https://github.com/tonyngmk/my-stoic-telebot.git
+
+	cd my-stoic-telebot
+
+	python3 -m pip install --user -r  requirements.txt
+
+	screen
+
+	ctrl + a + c (create new screen)
+
+	ctrl + a + n (switch screens)
+
+	python3 bot.py
