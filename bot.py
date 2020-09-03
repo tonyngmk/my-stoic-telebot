@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-# jolting file in heroku
-
 import telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
 from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)
@@ -13,6 +11,8 @@ import os
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+telegram.ext.JobQueue.run_repeating(telegram.ext.JobQueue(), bot, 10) # Prevent sleeping?
 
 CONT, SPLIT, TODAY, DATE, RESP, LOOP = range(6)
 
@@ -127,7 +127,7 @@ def main():
     updater.start_webhook(listen="0.0.0.0",
                           port=int(PORT),
                           url_path=TOKEN)
-    updater.bot.setWebhook('https://yourherokuappname.herokuapp.com/' + TOKEN)
+    updater.bot.setWebhook('https://my-stoic-telebot.herokuapp.com/' + TOKEN)
     
 if __name__ == '__main__':
     main()
