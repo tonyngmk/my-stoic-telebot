@@ -1,6 +1,7 @@
-# my-stoic-telebot
+# Daily Stoic Telegram Bot
+Search `@dailystoic_bot` in Telegram. 
 
-Search @dailystoic_bot in Telegram
+This is a bot that shares ancient Stoic philosophy as adapted from the book The Daily Stoic by Ryan Holiday.
 
 ## Diagram
 
