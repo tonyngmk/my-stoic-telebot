@@ -4,6 +4,13 @@ Search in dailystoic_bot in telegram
 
 ### 1. Queries from a json:server via `GET` hosted in Heroku.
 
+https://my-stoic-bot.herokuapp.com/
+https://my-stoic-bot.herokuapp.com/passages
+
+Query string example:
+
+https://my-stoic-bot.herokuapp.com/passages?date=Jan01
+
 ### 2. Hosted on AWS EC2 Linux2 AMI
 
 Dump of codes to get it up:
