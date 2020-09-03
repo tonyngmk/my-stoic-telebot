@@ -12,7 +12,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                      level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-telegram.ext.JobQueue.run_repeating(telegram.ext.JobQueue(), bot, 10) # Prevent sleeping?
+# telegram.ext.JobQueue.run_repeating(telegram.ext.JobQueue(), bot, 10) # Prevent sleeping?
 
 CONT, SPLIT, TODAY, DATE, RESP, LOOP = range(6)
 
