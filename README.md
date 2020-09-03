@@ -32,8 +32,6 @@ cd my-stoic-telebot
 
 python3 -m pip install --user -r  requirements.txt
 
-
-p
 screen
 
 ctrl + a + c (create new screen)

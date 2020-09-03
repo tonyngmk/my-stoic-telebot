@@ -100,8 +100,11 @@ def echo(update, context):
 def unknown(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Oops, didn't really understand your command 🤨")
 
-def help_command(update, context):
-    update.message.reply_text("/start - to start the bot")
+def help(update, context):
+    user = update.message.from_user
+    logger.info("User %s queried for commands via /help", user.first_name)
+    context.bot.send_message(chat_id=update.effective_chat.id, text="😃 Calm down, it's not rocket science. 😃")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="It's really just /start 😐")
 
 def cancel(update, context):
     user = update.message.from_user
@@ -130,7 +133,11 @@ def main():
         },
         fallbacks=[CommandHandler('No', cancel)])
     dispatcher.add_handler(conv_handler)
-
+    
+    # Help
+    helpCommand = CommandHandler('help', help)
+    dispatcher.add_handler(helpCommand)
+    
     updater.start_polling() # Start locally hosting Bot
     updater.idle()  # Run the bot until you press Ctrl-C or the process receives SIGINT,
 
