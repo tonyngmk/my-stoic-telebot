@@ -18,6 +18,8 @@ logger = logging.getLogger(__name__)
 CONT, SPLIT, TODAY, DATE, RESP, LOOP = range(6)
 
 def start(update, context):
+    user = update.message.from_user
+    logger.info("User {} has initiated the bot /start".format(user.first_name, update.message.text))
     context.bot.send_message(chat_id=update.effective_chat.id, text="👋 Hello, I'm Tony bot! 😀")
     context.bot.send_message(chat_id=update.effective_chat.id, text="🛕 Welcome to the Daily Stoic! 🛕\n\n It's yet another beautiful day! 🌈☀")
     context.bot.send_message(chat_id=update.effective_chat.id, text="💪 Our work together is about to begin 💪")
@@ -28,6 +30,8 @@ def start(update, context):
     return CONT
 
 def date_split(update, context):
+    user = update.message.from_user
+    logger.info("User {} is in 2nd stage of conversation having replied /Yes".format(user.first_name, update.message.text))
     kb = [[telegram.KeyboardButton('/Today')],
           [telegram.KeyboardButton('/AnotherDate')]]
     kb_markup = telegram.ReplyKeyboardMarkup(kb, one_time_keyboard=True)
@@ -43,6 +47,7 @@ def get_passage(date):
     
 def today_date(update, context):
     user = update.message.from_user
+    logger.info("User {} is reading /Today".format(user.first_name, update.message.text))
     TODAY = datetime.today().strftime("%b%d")
     context.bot.send_message(chat_id=update.effective_chat.id, text="🤓 Thanks! \n\nBtw, these passages are adapted from:\n\n 📚 *The Daily Stoic* by Ryan Holiday\n\n to help you live a good and meaningful life. 👴👴👴", parse_mode=telegram.ParseMode.MARKDOWN)
     context.bot.send_message(chat_id=update.effective_chat.id, text="Flipping to {} 🧙‍♂️🧙‍♂️🧙‍♂️. Do allow approximately 2-5s... 🙏".format(TODAY))
@@ -55,6 +60,8 @@ def today_date(update, context):
     return RESP
 
 def custom_date(update, context):
+    user = update.message.from_user
+    logger.info("User {} is selecting a custom date".format(user.first_name, update.message.text))
     context.bot.send_message(chat_id=update.effective_chat.id, text="🤓 Thanks! \n\nBtw, these passages are adapted from:\n\n 📚 *The Daily Stoic* by Ryan Holiday\n\n to help you live a good and meaningful life. 👴👴👴", parse_mode=telegram.ParseMode.MARKDOWN)
     context.bot.send_message(chat_id=update.effective_chat.id, text="➡ Start by typing *MMMdd* e.g. (Jan03, Sep27) to read. 🐱‍🏍.", parse_mode=telegram.ParseMode.MARKDOWN)
     user = update.message.from_user
@@ -63,6 +70,7 @@ def custom_date(update, context):
 
 def custom_date2(update, context):
     user = update.message.from_user
+    logger.info("User {} has selected a custom date {}".format(user.first_name, update.message.text))
     context.bot.send_message(chat_id=update.effective_chat.id, text="Very well, {}. Flipping to {} 🧙‍♂️🧙‍♂️🧙‍♂️. Do allow approximately 2-5s... 🙏".format(user.first_name, update.message.text))
     logger.info("User %s reading date %s", user.first_name, update.message.text)
     js = get_passage(update.message.text)
@@ -74,6 +82,8 @@ def custom_date2(update, context):
     return RESP
 
 def loop(update, context):
+    user = update.message.from_user
+    logger.info("User {} has selected to read again".format(user.first_name, update.message.text))
     context.bot.send_message(chat_id=update.effective_chat.id, text="🔥🔥🔥 That's amazing. Remember it is never about how much you read, but how much you are actively reflecting or practising.")
     # context.bot.send_message(chat_id=update.effective_chat.id, text="➡ Continue by typing *MMMdd* e.g. (Jan03, Sep27) to read. 🐱‍🏍.", parse_mode=telegram.ParseMode.MARKDOWN)
     user = update.message.from_user
