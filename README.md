@@ -5,7 +5,6 @@ Search in dailystoic_bot in telegram
 ### 1. Queries from a json:server via `GET` hosted in Heroku.
 
 https://my-stoic-bot.herokuapp.com/
-https://my-stoic-bot.herokuapp.com/passages
 
 Query string example:
 
