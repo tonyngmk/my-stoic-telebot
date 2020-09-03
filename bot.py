@@ -129,5 +129,16 @@ def main():
                           url_path=TOKEN)
     updater.bot.setWebhook('https://my-stoic-telebot.herokuapp.com/' + TOKEN)
     
+    while True:
+        try:
+            resp = self._con_pool.request(*args, **kwargs)
+            break
+        except urllib3.exceptions.TimeoutError:
+            raise TimedOut()
+        except urllib3.exceptions.HTTPError as error:
+            # HTTPError must come last as its the base urllib3 exception class
+            # TODO: do something smart here; for now just raise NetworkError
+            print(NetworkError('urllib3 HTTPError {0}'.format(error)))
+    
 if __name__ == '__main__':
     main()
