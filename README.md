@@ -14,20 +14,26 @@ https://my-stoic-bot.herokuapp.com/passages?date=Jan01
 
 ###### Dump of codes to get it up:
 
+sudo yum update -y 
+
 sudo yum install git -y
+
+sudo amazon-linux-extras install python3.8 -y
+
+alias python3='/usr/bin/python3.8'
+
+python3 --version
 
 sudo yum -y install python3-pip
 
-sudo amazon-linux-extras install python3.8
-
-alias python='/usr/bin/python3.8'
+git clone https://github.com/tonyngmk/my-stoic-telebot.git
 
 cd my-stoic-telebot
 
-sudo pip3 install requirements.txt
+python3 -m pip install --user -r  requirements.txt
 
-chmod 755 ./bot.py
 
+p
 screen
 
 ctrl + a + c (create new screen)
