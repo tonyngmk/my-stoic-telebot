@@ -12,7 +12,7 @@ https://my-stoic-bot.herokuapp.com/passages?date=Jan01
 
 ### 2. Hosted on AWS EC2 Linux2 AMI
 
-Dump of codes to get it up:
+###### Dump of codes to get it up:
 
 sudo yum install git -y
 
