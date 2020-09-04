@@ -6,7 +6,7 @@ This is a bot that shares ancient Stoic philosophy as adapted from the book The 
 ## Diagram
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tonyngmk/my-stoic-telebot/master/telegram-stoicbot.png?token=AICMHGLB2OEPKJMXE3FXHQS7KGK7I" />
+  <img src="https://raw.githubusercontent.com/tonyngmk/my-stoic-telebot/master/telegram-stoicbot.png" />
 </p>
 
 ### 1. JSON:Server 
@@ -40,7 +40,7 @@ To do so, one can run it perpetually using a cloud virtual machine, e.g. AWS EC2
 I've tried running on free tier t2 micro and the CPU Credit Usage for 2 bots is negligible, so it should be essentially free.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tonyngmk/my-stoic-telebot/master/cpu_cred_usage.png?token=AICMHGK2RGR762QQNET7HKS7KGLDK" />
+  <img src="https://raw.githubusercontent.com/tonyngmk/my-stoic-telebot/master/cpu_cred_usage.png" />
 </p>
 
 ##### Dump of codes to get it hosted on AWS EC2 Linux2 AMI:
@@ -70,3 +70,7 @@ I've tried running on free tier t2 micro and the CPU Credit Usage for 2 bots is 
 	ctrl + a + n (switch screens)
 
 	python3 bot.py
+	
+### Note
+
+In case you are reusing the python script, my telegram bot's token is stored in a **botapi.txt** file which is not in this repo as it in .gitignore. 
