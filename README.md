@@ -32,8 +32,9 @@ There are multiple libraries in python to help you create a telegram bot. The mo
 
 	pip install python-telegram-bot
 	
-Thereafter, the python script must continually run for the bot to work. 
-To do so, one can run it on a cloud virtual machine, e.g. AWS EC2, Google Compute Engine, etc. 
+Thereafter, just edit along **bot.py** file and execute it. The python script must continually run for the bot to work. 
+To do so, one can run it perpetually using a cloud virtual machine, e.g. AWS EC2, Google Compute Engine, etc. 
+
 I've tried running on free tier t2 micro and the CPU Credit Usage for 2 bots is negligible, so it should be essentially free.
 
 <p align="center">
