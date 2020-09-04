@@ -73,4 +73,5 @@ I've tried running on free tier t2 micro and the CPU Credit Usage for 2 bots is 
 	
 ### Note
 
-In case you are reusing the python script, my telegram bot's token is stored in a **botapi.txt** file which is not in this repo as it in .gitignore. 
+This git repo does not have certain files containing credentials excluded in .gitignore. In case you are reusing the script, store:
+- Telegram bot's API in **botapi.txt**
