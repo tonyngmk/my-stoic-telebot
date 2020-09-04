@@ -6,7 +6,7 @@ This is a bot that shares ancient Stoic philosophy as adapted from the book The 
 ## Diagram
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tonyngmk/my-stoic-telebot/master/cpu_cred_usage.png?token=AICMHGPNALIWORYTXNWDKA27KGIE2" />
+  <img src="https://raw.githubusercontent.com/tonyngmk/my-stoic-telebot/master/telegram-stoicbot.png?token=AICMHGLB2OEPKJMXE3FXHQS7KGK7I" />
 </p>
 
 ### 1. JSON:Server 
