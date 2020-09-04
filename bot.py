@@ -115,7 +115,10 @@ def cancel(update, context):
     return ConversationHandler.END
 
 def main():
-    TOKEN = '1322982150:AAGYLypxEx132JKT3EXyfpzZtTzzswiM0e4'
+    # TOKEN = '1322982150:AAGYLypxEx132JKT3EXyfpzZtTzzswiM0e4'
+    f = open("botapi.config")
+    TOKEN = f.readlines()[0]
+    f.close()
     updater = Updater(TOKEN, use_context=True)
     dispatcher = updater.dispatcher
     conv_handler = ConversationHandler(
