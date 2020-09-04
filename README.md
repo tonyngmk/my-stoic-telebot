@@ -40,7 +40,7 @@ To do so, one can run it perpetually using a cloud virtual machine, e.g. AWS EC2
 I've tried running on free tier t2 micro and the CPU Credit Usage for 2 bots is negligible, so it should be essentially free.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tonyngmk/my-stoic-telebot/master/cpu_cred_usage.png?token=AICMHGPNALIWORYTXNWDKA27KGIE2" />
+  <img src="https://raw.githubusercontent.com/tonyngmk/my-stoic-telebot/master/cpu_cred_usage.png?token=AICMHGK2RGR762QQNET7HKS7KGLDK" />
 </p>
 
 ##### Dump of codes to get it hosted on AWS EC2 Linux2 AMI:
