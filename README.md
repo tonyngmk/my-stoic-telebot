@@ -37,7 +37,7 @@ To do so, one can run it on a cloud virtual machine, e.g. AWS EC2, Google Comput
 I've tried running on free tier t2 micro and the CPU Credit Usage for 2 bots is negligible, so it should be essentially free.
 
 <p align="center">
-![CPU Credit Usage in AWS EC2 running Linux2 AMI](cpu_cred_usage.png)
+  <img src="https://raw.githubusercontent.com/tonyngmk/my-stoic-telebot/master/cpu_cred_usage.png?token=AICMHGPNALIWORYTXNWDKA27KGIE2" />
 </p>
 
 ##### Dump of codes to get it hosted on AWS EC2 Linux2 AMI:
